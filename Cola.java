@@ -14,8 +14,8 @@ public class Cola<T> {
         listaInterna.eliminarInicio();
     }
 
-    public void peek() {
-        System.out.println(listaInterna.verCabeza());
+    public T peek() {
+        return listaInterna.verCabeza();
     }
 
     public boolean isEmpty() {
