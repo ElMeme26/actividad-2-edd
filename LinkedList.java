@@ -214,60 +214,12 @@ public class LinkedList<T> {
         }
     }
 
-    public void buscarDato(T dato) {
-        if (cabeza == null) {
-            System.out.println("La lista está vacía");
-            return;
-        }
+    public T verCabeza() {
+        return cabeza.dato;
+    }
 
-        boolean encontrado = false;
-
-        if (esCircular) {
-            Node<T> nodoIterador = cabeza;
-            do {
-                if (nodoIterador.dato.equals(dato)) {
-                    System.out.print("***" + nodoIterador.dato + "***");
-                    encontrado = true;
-                } else {
-                    System.out.print(nodoIterador.dato);
-                }
-
-                nodoIterador = nodoIterador.siguiente;
-                if (nodoIterador != cabeza) {
-                    System.out.print(" -> ");
-                }
-            } while (nodoIterador != cabeza);
-
-            System.out.println(" (vuelve a " + cabeza.dato + ")");
-
-        } else {
-            Node<T> nodoIterador = cabeza;
-
-            while (nodoIterador != null) {
-                if (nodoIterador.dato.equals(dato)) {
-                    System.out.print("***" + nodoIterador.dato + "***");
-                    encontrado = true;
-                } else {
-                    System.out.print(nodoIterador.dato);
-                }
-
-                if (nodoIterador.siguiente != null) {
-                    if (esDoble) {
-                        System.out.print(" <- -> ");
-                    } else {
-                        System.out.print(" -> ");
-                    }
-                }
-
-                nodoIterador = nodoIterador.siguiente;
-            }
-
-            System.out.println(" -> null");
-        }
-
-        if (!encontrado) {
-            System.out.println("\nEl dato " + dato + " no se encuentra en la lista.");
-        }
+    public boolean esVacio() {
+        return cabeza == null; 
     }
 }
 
