@@ -3,7 +3,7 @@ public class Pila<T> {
     LinkedList<T> listaInterna;
 
     public Pila() {
-        listaInterna = new LinkedList<>(false, false);
+        listaInterna = new LinkedList<>();
     }
 
     public void push(T dato) {

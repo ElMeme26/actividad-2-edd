@@ -3,7 +3,7 @@ public class Cola<T> {
     LinkedList<T> listaInterna;
 
     public Cola() {
-        listaInterna = new LinkedList<>(false, false);
+        listaInterna = new LinkedList<>();
     }
     
     public void enqueue(T dato) {
