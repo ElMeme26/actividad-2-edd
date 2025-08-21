@@ -15,7 +15,7 @@ public class Main {
             System.out.println("\n1- Gestionar comandos\n2- Gestionar programas\n3- Salir del programa");
 
             try {
-                System.out.print("Ingresa una opción: ");
+                System.out.print("\nIngresa una opción: ");
                 opcion = scanner.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Error: Elige una opción correcta.");
@@ -65,8 +65,7 @@ public class Main {
 
                             case 3:
                                 if (verificarListaPila(pila)) {
-                                    System.out.println("");
-                                    pila.peek();
+                                    System.out.println("\n" + pila.peek());
                                 }
 
                                 break;
